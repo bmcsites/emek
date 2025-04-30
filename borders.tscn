@@ -1,0 +1,219 @@
+[gd_scene load_steps=4 format=3 uid="uid://cuajly7xpdxl4"]
+
+[ext_resource type="PackedScene" uid="uid://c117h1vlbmhhh" path="res://fence_gate_2.tscn" id="1_d28qp"]
+[ext_resource type="PackedScene" uid="uid://de1cppmkl85py" path="res://fence_2.tscn" id="2_0xrbh"]
+[ext_resource type="PackedScene" uid="uid://bptwraysdil1h" path="res://barrier_6m.tscn" id="3_qrqev"]
+
+[node name="borders" type="Node"]
+
+[node name="fence_gate2" parent="." instance=ExtResource("1_d28qp")]
+transform = Transform3D(-9.99353e-09, 0, 0.306148, 0, 0.307175, 0, -0.228625, 0, -1.33822e-08, 4.57148, 0.0152036, -9.18037)
+metadata/_edit_lock_ = true
+
+[node name="fence_gate3" parent="." instance=ExtResource("1_d28qp")]
+transform = Transform3D(-9.99353e-09, 0, 0.306148, 0, 0.307175, 0, -0.228625, 0, -1.33822e-08, -6.3142, 0.0152036, 10.1448)
+metadata/_edit_lock_ = true
+
+[node name="fence side 1" type="Node" parent="."]
+
+[node name="fence2" parent="fence side 1" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 4.56143, 0.0275088, -8.12351)
+
+[node name="fence3" parent="fence side 1" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 4.56143, 0.0275088, -6.92194)
+
+[node name="fence4" parent="fence side 1" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 4.56143, 0.0275088, -5.68897)
+
+[node name="fence5" parent="fence side 1" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 4.56143, 0.0275088, -4.47032)
+
+[node name="fence6" parent="fence side 1" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 4.56143, 0.0275088, -3.25323)
+
+[node name="fence7" parent="fence side 1" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 4.56143, 0.0275088, -2.04508)
+
+[node name="fence8" parent="fence side 1" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 4.56143, 0.0275088, -0.848288)
+
+[node name="fence9" parent="fence side 1" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 4.56143, 0.0275088, 0.343902)
+
+[node name="fence10" parent="fence side 1" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 4.56143, 0.0275088, 1.54119)
+
+[node name="fence11" parent="fence side 1" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 4.56143, 0.0275088, 2.73511)
+
+[node name="fence12" parent="fence side 1" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 4.56143, 0.0275088, 3.93794)
+
+[node name="fence13" parent="fence side 1" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 4.56143, 0.0275088, 5.14366)
+
+[node name="fence14" parent="fence side 1" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 4.56143, 0.0275088, 6.34999)
+
+[node name="fence15" parent="fence side 1" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 4.56143, 0.0275088, 7.54282)
+
+[node name="fence16" parent="fence side 1" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 4.56143, 0.0275088, 8.74854)
+
+[node name="fence17" parent="fence side 1" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 4.56143, 0.0275088, 9.95487)
+
+[node name="fence side 2" type="Node" parent="."]
+
+[node name="fence2" parent="fence side 2" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, -6.31877, 0.0275088, -8.84675)
+metadata/_edit_lock_ = true
+
+[node name="fence12" parent="fence side 2" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, -6.31877, 0.0275088, -10.0427)
+metadata/_edit_lock_ = true
+
+[node name="fence13" parent="fence side 2" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, -6.31877, 0.0275088, -11.2388)
+metadata/_edit_lock_ = true
+
+[node name="fence3" parent="fence side 2" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, -6.31877, 0.0275088, -7.64517)
+metadata/_edit_lock_ = true
+
+[node name="fence4" parent="fence side 2" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, -6.31877, 0.0275088, -6.4122)
+metadata/_edit_lock_ = true
+
+[node name="fence5" parent="fence side 2" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, -6.31877, 0.0275088, -5.19355)
+metadata/_edit_lock_ = true
+
+[node name="fence6" parent="fence side 2" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, -6.31877, 0.0275088, -3.97646)
+metadata/_edit_lock_ = true
+
+[node name="fence7" parent="fence side 2" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, -6.31877, 0.0275088, -2.76831)
+metadata/_edit_lock_ = true
+
+[node name="fence8" parent="fence side 2" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, -6.31877, 0.0275088, -1.57152)
+metadata/_edit_lock_ = true
+
+[node name="fence9" parent="fence side 2" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, -6.31877, 0.0275088, -0.379332)
+metadata/_edit_lock_ = true
+
+[node name="fence10" parent="fence side 2" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, -6.31877, 0.0275088, 0.817959)
+metadata/_edit_lock_ = true
+
+[node name="fence11" parent="fence side 2" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, -6.31877, 0.0275088, 2.01187)
+metadata/_edit_lock_ = true
+
+[node name="fence14" parent="fence side 2" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, -6.31877, 0.0275088, 3.21712)
+metadata/_edit_lock_ = true
+
+[node name="fence15" parent="fence side 2" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, -6.31877, 0.0275088, 4.41517)
+metadata/_edit_lock_ = true
+
+[node name="fence16" parent="fence side 2" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, -6.31877, 0.0275088, 5.60735)
+metadata/_edit_lock_ = true
+
+[node name="fence17" parent="fence side 2" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, -6.31877, 0.0275088, 6.80464)
+metadata/_edit_lock_ = true
+
+[node name="fence18" parent="fence side 2" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, -6.31877, 0.0275088, 7.99856)
+metadata/_edit_lock_ = true
+
+[node name="fence19" parent="fence side 2" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, -6.31877, 0.0275088, 9.05396)
+metadata/_edit_lock_ = true
+
+[node name="fence side 3" type="Node" parent="."]
+
+[node name="fence3" parent="fence side 3" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-0.299998, 0, -0.00102627, 0, 0.3, 0, 0.00102627, 0, -0.299998, -5.63473, 0.0275088, -11.8513)
+metadata/_edit_lock_ = true
+
+[node name="fence4" parent="fence side 3" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-0.299998, 0, -0.00102627, 0, 0.3, 0, 0.00102627, 0, -0.299998, -4.40176, 0.0275088, -11.8555)
+metadata/_edit_lock_ = true
+
+[node name="fence5" parent="fence side 3" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-0.299998, 0, -0.00102627, 0, 0.3, 0, 0.00102627, 0, -0.299998, -3.18312, 0.0275088, -11.8597)
+metadata/_edit_lock_ = true
+
+[node name="fence6" parent="fence side 3" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-0.299998, 0, -0.00102627, 0, 0.3, 0, 0.00102627, 0, -0.299998, -1.96604, 0.0275088, -11.8638)
+metadata/_edit_lock_ = true
+
+[node name="fence7" parent="fence side 3" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-0.299998, 0, -0.00102627, 0, 0.3, 0, 0.00102627, 0, -0.299998, -0.757895, 0.0275088, -11.868)
+metadata/_edit_lock_ = true
+
+[node name="fence8" parent="fence side 3" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-0.299998, 0, -0.00102627, 0, 0.3, 0, 0.00102627, 0, -0.299998, 0.438887, 0.0275088, -11.8721)
+metadata/_edit_lock_ = true
+
+[node name="fence9" parent="fence side 3" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-0.299998, 0, -0.00102627, 0, 0.3, 0, 0.00102627, 0, -0.299998, 1.63107, 0.0275088, -11.8761)
+metadata/_edit_lock_ = true
+
+[node name="fence10" parent="fence side 3" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-0.299998, 0, -0.00102627, 0, 0.3, 0, 0.00102627, 0, -0.299998, 2.82835, 0.0275088, -11.8802)
+metadata/_edit_lock_ = true
+
+[node name="fence11" parent="fence side 3" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-0.299998, 0, -0.00102627, 0, 0.3, 0, 0.00102627, 0, -0.299998, 4.02226, 0.0275088, -11.8843)
+metadata/_edit_lock_ = true
+
+[node name="fence side 4" type="Node" parent="."]
+
+[node name="fence3" parent="fence side 4" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-0.299998, 0, -0.00102627, 0, 0.3, 0, 0.00102627, 0, -0.299998, -5.63473, 0.0275088, 10.6539)
+metadata/_edit_lock_ = true
+
+[node name="fence4" parent="fence side 4" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-0.299998, 0, -0.00102627, 0, 0.3, 0, 0.00102627, 0, -0.299998, -4.40176, 0.0275088, 10.6497)
+metadata/_edit_lock_ = true
+
+[node name="fence5" parent="fence side 4" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-0.299998, 0, -0.00102627, 0, 0.3, 0, 0.00102627, 0, -0.299998, -3.18312, 0.0275088, 10.6455)
+metadata/_edit_lock_ = true
+
+[node name="fence6" parent="fence side 4" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-0.299998, 0, -0.00102627, 0, 0.3, 0, 0.00102627, 0, -0.299998, -1.96604, 0.0275088, 10.6414)
+metadata/_edit_lock_ = true
+
+[node name="fence7" parent="fence side 4" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-0.299998, 0, -0.00102627, 0, 0.3, 0, 0.00102627, 0, -0.299998, -0.757895, 0.0275088, 10.6372)
+metadata/_edit_lock_ = true
+
+[node name="fence8" parent="fence side 4" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-0.299998, 0, -0.00102627, 0, 0.3, 0, 0.00102627, 0, -0.299998, 0.438887, 0.0275088, 10.6331)
+metadata/_edit_lock_ = true
+
+[node name="fence9" parent="fence side 4" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-0.299998, 0, -0.00102627, 0, 0.3, 0, 0.00102627, 0, -0.299998, 1.63107, 0.0275088, 10.6291)
+metadata/_edit_lock_ = true
+
+[node name="fence10" parent="fence side 4" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-0.299998, 0, -0.00102627, 0, 0.3, 0, 0.00102627, 0, -0.299998, 2.82835, 0.0275088, 10.625)
+metadata/_edit_lock_ = true
+
+[node name="fence11" parent="fence side 4" instance=ExtResource("2_0xrbh")]
+transform = Transform3D(-0.299998, 0, -0.00102627, 0, 0.3, 0, 0.00102627, 0, -0.299998, 4.02226, 0.0275088, 10.6209)
+metadata/_edit_lock_ = true
+
+[node name="Barrier_6M2" parent="." instance=ExtResource("3_qrqev")]
+transform = Transform3D(0.24, 0, 0, 0, 0.24, 0, 0, 0, 0.24, 4.59717, -0.0360803, -11.1933)
+metadata/_edit_lock_ = true

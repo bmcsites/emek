@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://gic2xcy1863y"]
+
+[ext_resource type="Texture2D" uid="uid://b2hc0dw834q84" path="res://Assets/Character_selection/bg.png" id="1_xahou"]
+
+[node name="Character_selection" type="Node2D"]
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(577, 325)
+scale = Vector2(0.744303, 0.626465)
+texture = ExtResource("1_xahou")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(577, 325)
+
+[node name="Character_slot" type="Panel" parent="."]
+offset_right = 1147.0
+offset_bottom = 646.0
+
+[node name="TextureRect" type="TextureRect" parent="Character_slot"]
+layout_mode = 0
+offset_right = 84.0
+offset_bottom = 86.0
+
+[node name="select" type="Line2D" parent="Character_slot"]

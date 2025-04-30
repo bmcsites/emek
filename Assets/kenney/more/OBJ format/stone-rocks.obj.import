@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dt7c0742p60jt"
+path="res://.godot/imported/stone-rocks.obj-217b04b487179e5b59c1fdfe473b5276.mesh"
+
+[deps]
+
+files=["res://.godot/imported/stone-rocks.obj-217b04b487179e5b59c1fdfe473b5276.mesh"]
+
+source_file="res://Assets/kenney/more/OBJ format/stone-rocks.obj"
+dest_files=["res://.godot/imported/stone-rocks.obj-217b04b487179e5b59c1fdfe473b5276.mesh", "res://.godot/imported/stone-rocks.obj-217b04b487179e5b59c1fdfe473b5276.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

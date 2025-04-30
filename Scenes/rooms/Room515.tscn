@@ -1,0 +1,381 @@
+[gd_scene load_steps=35 format=3 uid="uid://b2t8euk14rug7"]
+
+[ext_resource type="PackedScene" uid="uid://c7sa3rxhd5o2i" path="res://Assets/KayKit_Bits_Bundle1_1.0/Furniture Bits/bed_double_A.gltf" id="1_8eatk"]
+[ext_resource type="PackedScene" uid="uid://dcjmottlp2uuk" path="res://Assets/KayKit_Bits_Bundle1_1.0/Prototype Bits/Door_A.gltf" id="1_f3adb"]
+[ext_resource type="PackedScene" uid="uid://d16mg5en5ih3e" path="res://Scenes/UIOverlay.tscn" id="1_i2h6p"]
+[ext_resource type="PackedScene" uid="uid://cprk7gw5esmyx" path="res://Assets/KayKit_Bits_Bundle1_1.0/Restaurant Bits/wall_doorway.gltf" id="1_i4avb"]
+[ext_resource type="PackedScene" uid="uid://dgan1oare0gcf" path="res://Assets/KayKit_Bits_Bundle1_1.0/Furniture Bits/desk_decorated.gltf" id="3_w6nl7"]
+[ext_resource type="PackedScene" uid="uid://b1bybfqd6x48j" path="res://Assets/KayKit_Bits_Bundle1_1.0/Furniture Bits/chair_desk_A.gltf" id="4_2svo0"]
+[ext_resource type="PackedScene" uid="uid://cjgh27wlpa25r" path="res://Assets/KayKit_Bits_Bundle1_1.0/Furniture Bits/armchair_pillows.gltf" id="4_i4avb"]
+[ext_resource type="PackedScene" uid="uid://b0g8pnugn7efq" path="res://Assets/KayKit_Bits_Bundle1_1.0/Furniture Bits/chair_desk_B.gltf" id="5_or06v"]
+[ext_resource type="PackedScene" uid="uid://dewaf2anh6uyx" path="res://Assets/KayKit_Bits_Bundle1_1.0/Furniture Bits/shelf_A_big.gltf" id="6_uhnv8"]
+[ext_resource type="PackedScene" uid="uid://caewsa4qdpbki" path="res://Assets/KayKit_Bits_Bundle1_1.0/Furniture Bits/desk_large_decorated.gltf" id="6_ysyyu"]
+[ext_resource type="Texture2D" uid="uid://cmow4th3if3m" path="res://Assets/rooms/pin1.png" id="7_akxu2"]
+[ext_resource type="PackedScene" uid="uid://bbw478g08id1g" path="res://Assets/KayKit_Bits_Bundle1_1.0/Furniture Bits/chair_C.gltf" id="7_uhnv8"]
+[ext_resource type="Texture2D" uid="uid://clh62yde42p8q" path="res://Assets/rooms/bottle.png" id="8_i1d0q"]
+[ext_resource type="PackedScene" uid="uid://d4f3w3nqrbkd5" path="res://Assets/KayKit_Bits_Bundle1_1.0/Furniture Bits/desk.gltf" id="8_pokrx"]
+[ext_resource type="Texture2D" uid="uid://bii2cej80ump0" path="res://Assets/rooms/2girls.png" id="9_lag4r"]
+[ext_resource type="PackedScene" uid="uid://5afsmcj32gjw" path="res://Assets/KayKit_Bits_Bundle1_1.0/Furniture Bits/couch_pillows.gltf" id="11_akxu2"]
+[ext_resource type="PackedScene" uid="uid://dckge1av38yus" path="res://Assets/KayKit_Bits_Bundle1_1.0/Furniture Bits/pictureframe_large_B.gltf" id="12_i1d0q"]
+[ext_resource type="PackedScene" uid="uid://diw7pm5v2lpjf" path="res://Assets/KayKit_Bits_Bundle1_1.0/Furniture Bits/pictureframe_medium.gltf" id="13_lag4r"]
+[ext_resource type="PackedScene" uid="uid://j2mrpy1hpas0" path="res://Scenes/Player.tscn" id="14_2svo0"]
+[ext_resource type="Texture2D" uid="uid://bex3s1xcl0x80" path="res://Assets/rooms/window.png" id="15_or06v"]
+[ext_resource type="Texture2D" uid="uid://d0vv1v5epq73s" path="res://Assets/rooms/tziki-wall2.JPG" id="18_i1d0q"]
+[ext_resource type="Texture2D" uid="uid://3jiy1c6pfa1f" path="res://Assets/rooms/moti-wall1.jpg" id="20_lag4r"]
+[ext_resource type="PackedScene" uid="uid://bi2ewrp2qrwf2" path="res://Assets/KayKit_Bits_Bundle1_1.0/Restaurant Bits/kitchencounter_straight_A_decorated.gltf" id="22_34el8"]
+[ext_resource type="PackedScene" uid="uid://cywttoprbwo78" path="res://Assets/KayKit_Bits_Bundle1_1.0/Restaurant Bits/kitchencounter_straight_A_backsplash.gltf" id="23_drx3u"]
+[ext_resource type="PackedScene" uid="uid://2wlbj32ojayn" path="res://Assets/KayKit_Bits_Bundle1_1.0/Restaurant Bits/kitchencounter_straight_decorated.gltf" id="24_2673b"]
+[ext_resource type="Texture2D" uid="uid://tkw3lmchwffl" path="res://Assets/rooms/kitchen-window.png" id="25_drx3u"]
+[ext_resource type="PackedScene" uid="uid://cbddaolt28g5c" path="res://fridge_a_2.tscn" id="26_2673b"]
+[ext_resource type="PackedScene" uid="uid://drmt4lgioit1e" path="res://couch1.tscn" id="27_eglr3"]
+[ext_resource type="Script" uid="uid://t8btjwb1cm75" path="res://Scenes/buildingEntry.gd" id="29_3l0u6"]
+[ext_resource type="PackedScene" uid="uid://bqktyjmial5js" path="res://Scenes/main.tscn" id="30_3l0u6"]
+
+[sub_resource type="Environment" id="Environment_s2sxn"]
+background_mode = 1
+background_color = Color(0.231373, 0.231373, 0.231373, 1)
+ambient_light_color = Color(0.987687, 0.991244, 1, 1)
+tonemap_mode = 3
+tonemap_exposure = 0.8
+ssao_enabled = true
+ssao_radius = 1.5
+ssao_intensity = 1.2
+ssao_power = 1.0
+fog_enabled = true
+fog_light_color = Color(0.25098, 0.25098, 0.25098, 1)
+fog_height = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s2sxn"]
+albedo_color = Color(0.720467, 0.720468, 0.720467, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f3adb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hph7q"]
+
+[node name="Room515" type="Node3D"]
+
+[node name="Environment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_s2sxn")
+
+[node name="Lighting" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.3548, 0)
+
+[node name="UiOverlay_tscn" parent="." instance=ExtResource("1_i2h6p")]
+
+[node name="Player" parent="." groups=["player"] instance=ExtResource("14_2svo0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1417, 0.114092, -5.61989)
+
+[node name="PlayerSpawn" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.79771, 0, -7.89066)
+
+[node name="NPCSpawns" type="Node3D" parent="."]
+
+[node name="poti_spawn" type="Marker3D" parent="NPCSpawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.5776, 0, -7.53951)
+
+[node name="matos_spawn" type="Marker3D" parent="NPCSpawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.69816, 0, 2.35831)
+
+[node name="tziki_spawn" type="Marker3D" parent="NPCSpawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.74228, 0, 2.7161)
+
+[node name="RoomMesh" type="Node3D" parent="."]
+transform = Transform3D(1.2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="baseRoom" type="Node3D" parent="RoomMesh"]
+
+[node name="MainFloor" type="CSGBox3D" parent="RoomMesh/baseRoom"]
+transform = Transform3D(0.97, 0, 0, 0, 0.97, 0, 0, 0, 1, 0, 0, 0)
+use_collision = true
+size = Vector3(30, 0.1, 18)
+material = SubResource("StandardMaterial3D_s2sxn")
+metadata/_edit_lock_ = true
+
+[node name="FrontWall" type="CSGBox3D" parent="RoomMesh/baseRoom"]
+transform = Transform3D(1.37222, 0, 0, 0, 1.5, 0, 0, 0, 1, 0.0107553, 1.89967, -8.94298)
+use_collision = true
+size = Vector3(21.1948, 2.5, 0.2)
+material = SubResource("StandardMaterial3D_f3adb")
+metadata/_edit_lock_ = true
+
+[node name="BackWall" type="CSGBox3D" parent="RoomMesh/baseRoom"]
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 0.0115168, 1.89967, 8.88986)
+use_collision = true
+size = Vector3(29.0701, 2.5, 0.2)
+material = SubResource("StandardMaterial3D_f3adb")
+metadata/_edit_lock_ = true
+
+[node name="LeftWall" type="CSGBox3D" parent="RoomMesh/baseRoom"]
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 2.99172, -14.4836, 1.89967, 0)
+use_collision = true
+size = Vector3(0.2, 2.5, 6)
+material = SubResource("StandardMaterial3D_f3adb")
+metadata/_edit_lock_ = true
+
+[node name="rightWall" type="CSGBox3D" parent="RoomMesh/baseRoom"]
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 2.99172, 14.573, 1.89967, 0)
+use_collision = true
+size = Vector3(0.2, 2.5, 6)
+material = SubResource("StandardMaterial3D_f3adb")
+metadata/_edit_lock_ = true
+
+[node name="rooms" type="Node3D" parent="RoomMesh"]
+
+[node name="room1" type="Node3D" parent="RoomMesh/rooms"]
+
+[node name="wall2" type="CSGBox3D" parent="RoomMesh/rooms/room1"]
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, -10.9831, 1.89967, -0.099)
+use_collision = true
+size = Vector3(6.80579, 2.5, 0.2)
+material = SubResource("StandardMaterial3D_f3adb")
+metadata/_edit_lock_ = true
+
+[node name="wall" type="CSGBox3D" parent="RoomMesh/rooms/room1"]
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, -8.366, 1.89967, -6.359)
+use_collision = true
+size = Vector3(0.2, 2.5, 4.82477)
+material = SubResource("StandardMaterial3D_f3adb")
+metadata/_edit_lock_ = true
+
+[node name="wall3" type="CSGBox3D" parent="RoomMesh/rooms/room1"]
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, -8.366, 1.89967, -0.760046)
+use_collision = true
+size = Vector3(0.2, 2.5, 0.937698)
+material = SubResource("StandardMaterial3D_f3adb")
+metadata/_edit_lock_ = true
+
+[node name="wall_doorway3" parent="RoomMesh/rooms/room1" instance=ExtResource("1_i4avb")]
+transform = Transform3D(-3.0598e-08, 0, 0.515, 0, 0.951, 0, -0.7, 0, -2.25114e-08, -8.35118, 0.0340554, -2.56142)
+
+[node name="bed_double_A4" parent="RoomMesh/rooms/room1" instance=ExtResource("1_8eatk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.68301, -10.0296, 0, -6.25379)
+metadata/_edit_lock_ = true
+
+[node name="desk_decorated2" parent="RoomMesh/rooms/room1" instance=ExtResource("3_w6nl7")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -13.794, 0, -1.71688)
+
+[node name="chair_desk_A2" parent="RoomMesh/rooms/room1" instance=ExtResource("4_2svo0")]
+transform = Transform3D(-3.64262e-08, 0, -1, 0, 1, 0, 0.833333, 0, -4.37114e-08, -13.1544, 0, -1.32028)
+
+[node name="shelf_A_big2" parent="RoomMesh/rooms/room1" instance=ExtResource("6_uhnv8")]
+transform = Transform3D(-6.14847e-08, 0, 1.28189, 0, 1, 0, -1.40661, 0, -5.60332e-08, -14.5064, 2.6274, -1.73967)
+
+[node name="pin1" type="Sprite3D" parent="RoomMesh/rooms/room1/shelf_A_big2"]
+transform = Transform3D(0.08, 0, -4.44089e-16, 0, 0.08, 0, -4.44089e-16, 0, 0.08, -0.199332, 0.448721, 0.407551)
+texture = ExtResource("7_akxu2")
+
+[node name="bottle" type="Sprite3D" parent="RoomMesh/rooms/room1/shelf_A_big2"]
+transform = Transform3D(0.08, 0, -4.44089e-16, 0, 0.08, 0, -4.44089e-16, 0, 0.08, 0.553911, 0.439517, 0.315226)
+texture = ExtResource("8_i1d0q")
+
+[node name="2girls" type="Sprite3D" parent="RoomMesh/rooms/room1/shelf_A_big2"]
+transform = Transform3D(0.0575085, 0, 2.22045e-16, 0, 0.070497, 0, -6.66134e-16, 0, 0.08, -0.273731, -0.974276, 0.315226)
+texture = ExtResource("9_lag4r")
+
+[node name="room2" type="Node3D" parent="RoomMesh/rooms"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00472069, 0, -0.000585556)
+
+[node name="wall" type="CSGBox3D" parent="RoomMesh/rooms/room2"]
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1.07798, -10.979, 1.89967, 4.605)
+use_collision = true
+size = Vector3(0.2, 2.5, 8.78589)
+material = SubResource("StandardMaterial3D_f3adb")
+metadata/_edit_lock_ = true
+
+[node name="wall3" type="CSGBox3D" parent="RoomMesh/rooms/room2"]
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1.07798, -4.951, 1.89967, 4.605)
+use_collision = true
+size = Vector3(0.2, 2.5, 8.78589)
+material = SubResource("StandardMaterial3D_f3adb")
+metadata/_edit_lock_ = true
+
+[node name="bed_double_A2" parent="RoomMesh/rooms/room2" instance=ExtResource("1_8eatk")]
+transform = Transform3D(-1, 0, -2.54128e-07, 0, 1, 0, 1.50996e-07, 0, -1.68301, -9.28566, 0, 6.59793)
+metadata/_edit_lock_ = true
+
+[node name="wall_doorway4" parent="RoomMesh/rooms/room2" instance=ExtResource("1_i4avb")]
+transform = Transform3D(0.7, 0, 0, 0, 0.951, 0, 0, 0, 0.515, -6.25237, 0.0340554, -0.155624)
+metadata/_edit_lock_ = true
+
+[node name="chair_desk_B2" parent="RoomMesh/rooms/room2" instance=ExtResource("5_or06v")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.72382, 0.00371552, 6.81232)
+metadata/_edit_lock_ = true
+
+[node name="desk_large_decorated2" parent="RoomMesh/rooms/room2" instance=ExtResource("6_ysyyu")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.9617, 0, 6.62205)
+metadata/_edit_lock_ = true
+
+[node name="room3" type="Node3D" parent="RoomMesh/rooms"]
+
+[node name="wall2" type="CSGBox3D" parent="RoomMesh/rooms/room3"]
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 11.499, 1.89967, -0.099)
+use_collision = true
+size = Vector3(6, 2.5, 0.2)
+material = SubResource("StandardMaterial3D_f3adb")
+metadata/_edit_lock_ = true
+
+[node name="wall" type="CSGBox3D" parent="RoomMesh/rooms/room3"]
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 8.432, 1.89967, -4.45049)
+use_collision = true
+size = Vector3(0.2, 2.5, 8.6422)
+material = SubResource("StandardMaterial3D_f3adb")
+metadata/_edit_lock_ = true
+
+[node name="room4" type="Node3D" parent="RoomMesh/rooms"]
+
+[node name="wall2" type="CSGBox3D" parent="RoomMesh/rooms/room4"]
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 9.66643, 1.89967, -0.081)
+use_collision = true
+size = Vector3(3.41113, 2.5, 0.2)
+material = SubResource("StandardMaterial3D_f3adb")
+metadata/_edit_lock_ = true
+
+[node name="wall" type="CSGBox3D" parent="RoomMesh/rooms/room4"]
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1.07798, 5.258, 1.89967, 4.605)
+use_collision = true
+size = Vector3(0.2, 2.5, 8.78589)
+material = SubResource("StandardMaterial3D_f3adb")
+metadata/_edit_lock_ = true
+
+[node name="wall3" type="CSGBox3D" parent="RoomMesh/rooms/room4"]
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1.07798, 11.286, 1.89967, 4.605)
+use_collision = true
+size = Vector3(0.2, 2.5, 8.78589)
+material = SubResource("StandardMaterial3D_f3adb")
+metadata/_edit_lock_ = true
+
+[node name="wall_doorway5" parent="RoomMesh/rooms/room4" instance=ExtResource("1_i4avb")]
+transform = Transform3D(0.7, 0, 0, 0, 0.951, 0, 0, 0, 0.515, 6.59236, 0.0340554, -0.0945321)
+metadata/_edit_lock_ = true
+
+[node name="bed_double_A3" parent="RoomMesh/rooms/room4" instance=ExtResource("1_8eatk")]
+transform = Transform3D(-1, 0, -2.54128e-07, 0, 1, 0, 1.50996e-07, 0, -1.68301, 9.71098, 0, 6.59793)
+metadata/_edit_lock_ = true
+
+[node name="chair_C2" parent="RoomMesh/rooms/room4" instance=ExtResource("7_uhnv8")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9.7858, 0, 1.42819)
+
+[node name="desk2" parent="RoomMesh/rooms/room4" instance=ExtResource("8_pokrx")]
+transform = Transform3D(-3.64262e-08, 0, -1, 0, 1, 0, 0.833333, 0, -4.37114e-08, 10.4237, 2.38419e-07, 1.69085)
+
+[node name="bathroom1" type="Node3D" parent="RoomMesh/rooms"]
+
+[node name="wall2" type="CSGBox3D" parent="RoomMesh/rooms/bathroom1"]
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, -6.707, 1.89967, -4.022)
+use_collision = true
+size = Vector3(3.11621, 2.5, 0.2)
+material = SubResource("StandardMaterial3D_f3adb")
+metadata/_edit_lock_ = true
+
+[node name="wall" type="CSGBox3D" parent="RoomMesh/rooms/bathroom1"]
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, -5.106, 1.89967, -6.39313)
+use_collision = true
+size = Vector3(0.2, 2.5, 4.93283)
+material = SubResource("StandardMaterial3D_f3adb")
+metadata/_edit_lock_ = true
+
+[node name="Door_A3" parent="RoomMesh/rooms/bathroom1" instance=ExtResource("1_f3adb")]
+transform = Transform3D(0.666667, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -7.98552, 0, -3.95488)
+metadata/_edit_lock_ = true
+
+[node name="bathroom2" type="Node3D" parent="RoomMesh/rooms"]
+
+[node name="wall2" type="CSGBox3D" parent="RoomMesh/rooms/bathroom2"]
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 6.82, 1.89967, -4.002)
+use_collision = true
+size = Vector3(3.11621, 2.5, 0.2)
+material = SubResource("StandardMaterial3D_f3adb")
+metadata/_edit_lock_ = true
+
+[node name="wall" type="CSGBox3D" parent="RoomMesh/rooms/bathroom2"]
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 5.217, 1.89967, -6.39079)
+use_collision = true
+size = Vector3(0.2, 2.5, 4.92816)
+material = SubResource("StandardMaterial3D_f3adb")
+metadata/_edit_lock_ = true
+
+[node name="Door_A4" parent="RoomMesh/rooms/bathroom2" instance=ExtResource("1_f3adb")]
+transform = Transform3D(0.666667, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 6.99576, -1.43051e-06, -3.9333)
+metadata/_edit_lock_ = true
+
+[node name="Door_A5" parent="RoomMesh/rooms/bathroom2" instance=ExtResource("1_f3adb")]
+transform = Transform3D(-2.91409e-08, 0, -0.8, 0, 0.8, 0, 0.666667, 0, -3.49691e-08, 8.356, 0, -3.3332)
+metadata/_edit_lock_ = true
+
+[node name="Furniture" type="Node3D" parent="RoomMesh"]
+
+[node name="armchair_pillows2" parent="RoomMesh/Furniture" instance=ExtResource("4_i4avb")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.09999, 0, 7.57443)
+metadata/_edit_lock_ = true
+
+[node name="couch_pillows2" parent="RoomMesh/Furniture" instance=ExtResource("11_akxu2")]
+transform = Transform3D(-3.64262e-08, 0, 0.833333, 0, 1, 0, -1, 0, -4.37114e-08, -4.10018, 0.0109086, 5.16387)
+metadata/_edit_lock_ = true
+
+[node name="couch_pillows3" parent="RoomMesh/Furniture" instance=ExtResource("11_akxu2")]
+transform = Transform3D(-3.64262e-08, 0, 0.833333, 0, 1, 0, -1, 0, -4.37114e-08, -4.10018, 0.0109086, 2.18368)
+metadata/_edit_lock_ = true
+
+[node name="pictureframe_large_B2" parent="RoomMesh/Furniture" instance=ExtResource("12_i1d0q")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.84748, 2.18062, 5.26687)
+metadata/_edit_lock_ = true
+
+[node name="Sprite3D" type="Sprite3D" parent="RoomMesh/Furniture/pictureframe_large_B2"]
+transform = Transform3D(0.0793414, 0, 8.88178e-16, 0, 0.0695346, 0, -6.66134e-16, 0, 0.08, 0, 0, 0.15622)
+texture = ExtResource("18_i1d0q")
+
+[node name="pictureframe_medium2" parent="RoomMesh/Furniture" instance=ExtResource("13_lag4r")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.86431, 2.30356, 1.99237)
+
+[node name="Sprite3D" type="Sprite3D" parent="RoomMesh/Furniture/pictureframe_medium2"]
+transform = Transform3D(0.11, 0, 2.22045e-15, 0, 0.112728, 0, 0, 0, 0.11, 0, -0.0139713, 0.178637)
+texture = ExtResource("20_lag4r")
+metadata/_edit_lock_ = true
+
+[node name="bigwindow" type="Sprite3D" parent="RoomMesh/Furniture"]
+transform = Transform3D(0.591428, 0, 0, 0, 0.569462, 0, 0, 0, 0.5, 2.42889e-05, 1.73037, 8.78736)
+texture = ExtResource("15_or06v")
+metadata/_edit_lock_ = true
+
+[node name="kitchencounter_straight_A_decorated2" parent="RoomMesh/Furniture" instance=ExtResource("22_34el8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.5, 0.254478, 0.0485, -8.41901)
+
+[node name="kitchencounter_straight_A_backsplash2" parent="RoomMesh/Furniture" instance=ExtResource("23_drx3u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.5, 2.24546, 0.0485, -8.41334)
+
+[node name="kitchencounter_straight_decorated2" parent="RoomMesh/Furniture" instance=ExtResource("24_2673b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.5, 4.0942, 0.0547643, -8.41244)
+
+[node name="Sprite3D" type="Sprite3D" parent="RoomMesh/Furniture"]
+transform = Transform3D(0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, 2.16264, 2.62751, -8.84191)
+texture = ExtResource("25_drx3u")
+
+[node name="fridge_A3" parent="RoomMesh/Furniture" instance=ExtResource("26_2673b")]
+transform = Transform3D(-3.21279e-08, 0, -0.537, 0, 1.103, 0, 0.735, 0, -2.3473e-08, 4.55126, -0.154137, -5.52964)
+
+[node name="couch" parent="RoomMesh/Furniture" instance=ExtResource("27_eglr3")]
+transform = Transform3D(2, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
+
+[node name="Interactables" type="Node3D" parent="."]
+
+[node name="ExitArea" type="Node3D" parent="."]
+
+[node name="Door_A2" parent="ExitArea" instance=ExtResource("1_f3adb")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -4.31205, 0, -8.87789)
+
+[node name="BuildingEntry" type="Node3D" parent="ExitArea"]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -3.66653, 0.990739, -8.59648)
+script = ExtResource("29_3l0u6")
+scene_to_load = ExtResource("30_3l0u6")
+
+[node name="EntryArea" type="Area3D" parent="ExitArea/BuildingEntry"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ExitArea/BuildingEntry/EntryArea"]
+shape = SubResource("BoxShape3D_hph7q")
+
+[node name="Label3D" type="Label3D" parent="ExitArea/BuildingEntry"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.442576, 0.0074935)
+visible = false
+text = "לחץ E להכנס"
+
+[connection signal="body_entered" from="ExitArea/BuildingEntry/EntryArea" to="ExitArea/BuildingEntry" method="_on_entry_area_body_entered"]

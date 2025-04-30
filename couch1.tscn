@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://drmt4lgioit1e"]
+
+[ext_resource type="PackedScene" uid="uid://ds4al7vk0q22u" path="res://Assets/rooms/couch.fbx" id="1_xj61j"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2bnv1"]
+albedo_color = Color(0, 0.439216, 0.6, 1)
+
+[node name="couch" instance=ExtResource("1_xj61j")]
+
+[node name="CouchMesh" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_2bnv1")

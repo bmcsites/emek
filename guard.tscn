@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://hd07a071viuy"]
+
+[ext_resource type="PackedScene" uid="uid://dcjmottlp2uuk" path="res://Assets/KayKit_Bits_Bundle1_1.0/Prototype Bits/Door_A.gltf" id="1_lrhy8"]
+[ext_resource type="PackedScene" uid="uid://cprk7gw5esmyx" path="res://Assets/KayKit_Bits_Bundle1_1.0/Restaurant Bits/wall_doorway.gltf" id="2_ay375"]
+[ext_resource type="PackedScene" uid="uid://bnq5k5yahp6cu" path="res://Assets/KayKit_Bits_Bundle1_1.0/Restaurant Bits/wall_window_closed.gltf" id="3_ioqu5"]
+[ext_resource type="PackedScene" uid="uid://ytscbpj1daog" path="res://Assets/KayKit_Bits_Bundle1_1.0/Restaurant Bits/wall.gltf" id="4_tuxdl"]
+[ext_resource type="PackedScene" uid="uid://te2p2kpeuo0s" path="res://Assets/kenney/FBX format/roof-flat-awning-b.fbx" id="5_qgjdg"]
+
+[node name="guard" type="Node"]
+
+[node name="Door_A2" parent="." instance=ExtResource("1_lrhy8")]
+transform = Transform3D(-0.151479, 0, -7.52268e-09, 0, 0.14966, 0, 1.32427e-08, 0, -0.0860494, 4.42258, 0.0204967, -11.2345)
+
+[node name="wall_doorway2" parent="." instance=ExtResource("2_ay375")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 4.30725, 0.0217507, -11.2514)
+
+[node name="wall_window_closed2" parent="." instance=ExtResource("3_ioqu5")]
+transform = Transform3D(-6.55671e-09, 0, 0.15, 0, 0.15, 0, -0.15, 0, -6.55671e-09, 4.59387, 0.0191166, -11.5112)
+
+[node name="wall_window_closed3" parent="." instance=ExtResource("3_ioqu5")]
+transform = Transform3D(-6.55671e-09, 0, 0.15, 0, 0.15, 0, -0.15, 0, -6.55671e-09, 4.03469, 0.0191166, -11.5112)
+
+[node name="wall2" parent="." instance=ExtResource("4_tuxdl")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 4.3014, 0.0194243, -11.7937)
+
+[node name="roof-flat-awning-b" parent="." instance=ExtResource("5_qgjdg")]
+transform = Transform3D(0.62, 0, 0, 0, 0.62, 0, 0, 0, 0.62, 4.31657, 0.488276, -11.4984)

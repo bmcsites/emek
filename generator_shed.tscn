@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cki62axi0uoev"]
+
+[ext_resource type="PackedScene" uid="uid://c1pla0x0flhga" path="res://Assets/single/GeneratorShed.fbx" id="1_75svo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_84eiy"]
+albedo_color = Color(0.676438, 0.367282, 0.0691093, 1)
+
+[sub_resource type="Skin" id="Skin_75svo"]
+
+[node name="GeneratorShed" instance=ExtResource("1_75svo")]
+
+[node name="Cube_014" parent="." index="4"]
+transform = Transform3D(208.169, 0, 0, 0, -2.38461e-06, 148.51, 0, -20.0035, -1.77038e-05, -2.02845, 2.9493, 4.84739)
+surface_material_override/0 = SubResource("StandardMaterial3D_84eiy")
+
+[node name="Point" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, 0.0609707, 7.93467, 0.125945)
+
+[node name="Cube_010" parent="." index="13"]
+skin = SubResource("Skin_75svo")

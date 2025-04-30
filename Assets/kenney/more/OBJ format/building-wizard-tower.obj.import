@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://8fjf7ef4w1jj"
+path="res://.godot/imported/building-wizard-tower.obj-a27c7a6f13564fd05c1fc2a7364439d3.mesh"
+
+[deps]
+
+files=["res://.godot/imported/building-wizard-tower.obj-a27c7a6f13564fd05c1fc2a7364439d3.mesh"]
+
+source_file="res://Assets/kenney/more/OBJ format/building-wizard-tower.obj"
+dest_files=["res://.godot/imported/building-wizard-tower.obj-a27c7a6f13564fd05c1fc2a7364439d3.mesh", "res://.godot/imported/building-wizard-tower.obj-a27c7a6f13564fd05c1fc2a7364439d3.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

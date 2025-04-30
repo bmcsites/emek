@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bx74ngwvw018y"
+path="res://.godot/imported/rug_rectangle_A.obj-20174da1e42d78fb895d34547efa554f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/rug_rectangle_A.obj-20174da1e42d78fb895d34547efa554f.mesh"]
+
+source_file="res://Assets/KayKit_Bits_Bundle1_1.0/KayKit_Furniture_Bits_1.0_FREE/Assets/obj/rug_rectangle_A.obj"
+dest_files=["res://.godot/imported/rug_rectangle_A.obj-20174da1e42d78fb895d34547efa554f.mesh", "res://.godot/imported/rug_rectangle_A.obj-20174da1e42d78fb895d34547efa554f.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

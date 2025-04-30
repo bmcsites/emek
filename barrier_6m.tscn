@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://bptwraysdil1h"]
+
+[ext_resource type="PackedScene" uid="uid://dnsymv331m2l5" path="res://Assets/single/Barrier_6M.fbx" id="1_3btj6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3btj6"]
+albedo_color = Color(1, 0.415686, 0.172549, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mqgpr"]
+albedo_color = Color(1, 0.145098, 0, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5p6no"]
+albedo_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yvq6k"]
+albedo_color = Color(0, 0, 0, 0.552941)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h13av"]
+albedo_color = Color(0.982029, 0.437951, 0.589793, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3btj6"]
+size = Vector3(4.229, 3.49829, 0.36731)
+
+[node name="Barrier_6M" instance=ExtResource("1_3btj6")]
+
+[node name="Post" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_3btj6")
+
+[node name="Beam" parent="Post/Beam bracket" index="1"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.000636519, -0.0290212, 0)
+
+[node name="Safety stickers" parent="Post/Beam bracket/Beam" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_mqgpr")
+
+[node name="Beam plugs" parent="Post/Beam bracket/Beam" index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_5p6no")
+
+[node name="Shaft" parent="Post" index="2"]
+surface_material_override/0 = SubResource("StandardMaterial3D_yvq6k")
+
+[node name="Cylinder" parent="Post" index="3"]
+surface_material_override/0 = SubResource("StandardMaterial3D_h13av")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="2"]
+transform = Transform3D(-6.38228e-08, 0, 1, 0, 0.435172, 0, -1.4601, 0, -4.37114e-08, 0.270735, 0.185538, 2.90965)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.124268, 1.26013, -0.000225067)
+shape = SubResource("BoxShape3D_3btj6")

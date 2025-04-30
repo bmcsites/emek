@@ -1,0 +1,321 @@
+[gd_scene load_steps=24 format=3 uid="uid://bqktyjmial5js"]
+
+[ext_resource type="Texture2D" uid="uid://bc2gcq6c4qapw" path="res://Assets/sky/kloofendal_48d_partly_cloudy_puresky_4k.hdr" id="1_hptm8"]
+[ext_resource type="PackedScene" uid="uid://d16mg5en5ih3e" path="res://Scenes/UIOverlay.tscn" id="1_jkdf5"]
+[ext_resource type="PackedScene" uid="uid://j2mrpy1hpas0" path="res://Scenes/Player.tscn" id="2_6iyac"]
+[ext_resource type="PackedScene" uid="uid://bokojxmsk7iym" path="res://Assets/kenney/more/GLB format/grass-forest.glb" id="2_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://dqcexaxcqtckt" path="res://buildings.tscn" id="3_fdnlq"]
+[ext_resource type="PackedScene" uid="uid://b38biamhuj0v6" path="res://Assets/kenney/more/GLB format/grass.glb" id="3_kry3j"]
+[ext_resource type="PackedScene" uid="uid://dc2o2csd0m7fg" path="res://Scenes/BuildingEntry.tscn" id="4_6iyac"]
+[ext_resource type="PackedScene" uid="uid://dgx5wc7pw47o4" path="res://road.tscn" id="6_fdnlq"]
+[ext_resource type="PackedScene" uid="uid://b2t8euk14rug7" path="res://Scenes/rooms/Room515.tscn" id="6_jkdf5"]
+[ext_resource type="PackedScene" uid="uid://xe5pmm4gtqc5" path="res://cars.tscn" id="7_jkdf5"]
+[ext_resource type="PackedScene" uid="uid://cubdb05xqd1rs" path="res://Scenes/rooms/ShiranRoom.tscn" id="7_wsu2k"]
+[ext_resource type="PackedScene" uid="uid://cuajly7xpdxl4" path="res://borders.tscn" id="8_6iyac"]
+[ext_resource type="Texture2D" uid="uid://ubvwutsni1bp" path="res://Assets/single/wood-sign.png" id="8_k12tt"]
+[ext_resource type="PackedScene" uid="uid://hd07a071viuy" path="res://guard.tscn" id="9_d1ilt"]
+[ext_resource type="PackedScene" uid="uid://7uoucvg0uqdu" path="res://grass.tscn" id="10_fdnlq"]
+[ext_resource type="PackedScene" uid="uid://cki62axi0uoev" path="res://generator_shed.tscn" id="13_fdnlq"]
+[ext_resource type="PackedScene" uid="uid://cje40yo70iw14" path="res://Assets/single/genie_lamp/lamp.glb" id="18_b3802"]
+[ext_resource type="PackedScene" uid="uid://7vvfh3uvv8u3" path="res://Scenes/rooms/taliRoom.tscn" id="19_fevyy"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_d1ilt"]
+panorama = ExtResource("1_hptm8")
+
+[sub_resource type="Sky" id="Sky_6iyac"]
+sky_material = SubResource("PanoramaSkyMaterial_d1ilt")
+
+[sub_resource type="Environment" id="Environment_d1ilt"]
+background_mode = 2
+background_energy_multiplier = 0.83
+sky = SubResource("Sky_6iyac")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_bo1nx"]
+size = Vector3(100, 1, 100)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hptm8"]
+size = Vector3(71.1892, 0.001, 71.216)
+
+[node name="main" type="Node3D"]
+
+[node name="UiOverlay_tscn" parent="." instance=ExtResource("1_jkdf5")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_d1ilt")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.09432, 4.94538, 0)
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.218229, 0, 0, 0, 0.725452, 0, 0, 0, 0.23124, -4.33521, -0.352803, -0.480998)
+mesh = SubResource("BoxMesh_bo1nx")
+metadata/_edit_lock_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 0.276885, 0.46, -0.100262)
+shape = SubResource("BoxShape3D_hptm8")
+
+[node name="Player" parent="." groups=["player"] instance=ExtResource("2_6iyac")]
+transform = Transform3D(0.26, 0, 0, 0, 0.26, 0, 0, 0, 0.26, -1.13421, 0.0148517, 0)
+
+[node name="trail" type="Node" parent="."]
+process_priority = 1
+
+[node name="buildings" parent="." instance=ExtResource("3_fdnlq")]
+
+[node name="515" type="Node" parent="buildings"]
+
+[node name="BuildingEntry" parent="buildings/515" instance=ExtResource("4_6iyac")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.7828, -0.343786, 0.0794084, -6.54169)
+scene_to_load = ExtResource("6_jkdf5")
+
+[node name="Sprite3D" type="Sprite3D" parent="buildings/515"]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.052, -0.341506, 0.787186, -6.66736)
+texture = ExtResource("8_k12tt")
+
+[node name="Label3D" type="Label3D" parent="buildings/515/Sprite3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0284863, -0.948641, -0.00149536)
+text = "דירה 515"
+font_size = 250
+
+[node name="miran" type="Node" parent="buildings"]
+
+[node name="BuildingEntry2" parent="buildings/miran" instance=ExtResource("4_6iyac")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.28063, 1.21954, 0.0794084, -6.57655)
+scene_to_load = ExtResource("7_wsu2k")
+
+[node name="Sprite3D2" type="Sprite3D" parent="buildings/miran"]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.052, 1.23689, 0.787186, -6.66736)
+texture = ExtResource("8_k12tt")
+
+[node name="Label3D" type="Label3D" parent="buildings/miran/Sprite3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0284863, -0.948641, -0.00149536)
+text = "הדירה של
+שירן דאנס"
+font_size = 200
+
+[node name="tali" type="Node" parent="buildings"]
+
+[node name="BuildingEntry2" parent="buildings/tali" instance=ExtResource("4_6iyac")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.28063, 2.82983, 0.0794084, -6.57655)
+scene_to_load = ExtResource("19_fevyy")
+
+[node name="Sprite3D2" type="Sprite3D" parent="buildings/tali"]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.052, 2.84718, 0.787186, -6.66736)
+texture = ExtResource("8_k12tt")
+
+[node name="Label3D" type="Label3D" parent="buildings/tali/Sprite3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0284863, -0.948641, -0.00149536)
+text = "הדירה של
+שירן דאנס"
+font_size = 200
+
+[node name="trees" type="Node" parent="."]
+
+[node name="trees1" type="Node" parent="trees"]
+
+[node name="grass-forest3" parent="trees/trees1" instance=ExtResource("2_jjvhh")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.6121, -0.15, -8.118)
+metadata/_edit_lock_ = true
+
+[node name="grass-forest4" parent="trees/trees1" instance=ExtResource("2_jjvhh")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.62515, -0.15, -8.118)
+metadata/_edit_lock_ = true
+
+[node name="grass-forest5" parent="trees/trees1" instance=ExtResource("2_jjvhh")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.63554, -0.15, -8.118)
+metadata/_edit_lock_ = true
+
+[node name="grass-forest6" parent="trees/trees1" instance=ExtResource("2_jjvhh")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.631329, -0.15, -8.118)
+metadata/_edit_lock_ = true
+
+[node name="grass-forest7" parent="trees/trees1" instance=ExtResource("2_jjvhh")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.482553, -0.15, -8.118)
+metadata/_edit_lock_ = true
+
+[node name="grass-forest8" parent="trees/trees1" instance=ExtResource("2_jjvhh")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.482553, -0.15, -7.28309)
+metadata/_edit_lock_ = true
+
+[node name="grass2" parent="trees/trees1" instance=ExtResource("3_kry3j")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0288733, -0.15, -8.11145)
+metadata/_edit_lock_ = true
+
+[node name="grass3" parent="trees/trees1" instance=ExtResource("3_kry3j")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.14231, -0.15, -8.11145)
+metadata/_edit_lock_ = true
+
+[node name="grass4" parent="trees/trees1" instance=ExtResource("3_kry3j")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.12872, -0.15, -8.11145)
+metadata/_edit_lock_ = true
+
+[node name="grass5" parent="trees/trees1" instance=ExtResource("3_kry3j")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.05946, -0.15, -8.11145)
+metadata/_edit_lock_ = true
+
+[node name="grass6" parent="trees/trees1" instance=ExtResource("3_kry3j")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.10126, -0.15, -8.11145)
+metadata/_edit_lock_ = true
+
+[node name="trees4" type="Node" parent="trees"]
+
+[node name="grass-forest2" parent="trees/trees4" instance=ExtResource("2_jjvhh")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.07672, -0.15, 3.22469)
+metadata/_edit_lock_ = true
+
+[node name="grass-forest3" parent="trees/trees4" instance=ExtResource("2_jjvhh")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.6121, -0.15, 3.22469)
+metadata/_edit_lock_ = true
+
+[node name="grass-forest4" parent="trees/trees4" instance=ExtResource("2_jjvhh")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.62515, -0.15, 3.22469)
+metadata/_edit_lock_ = true
+
+[node name="grass-forest5" parent="trees/trees4" instance=ExtResource("2_jjvhh")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.63554, -0.15, 3.22469)
+metadata/_edit_lock_ = true
+
+[node name="grass-forest6" parent="trees/trees4" instance=ExtResource("2_jjvhh")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.631329, -0.15, 3.22469)
+metadata/_edit_lock_ = true
+
+[node name="grass-forest7" parent="trees/trees4" instance=ExtResource("2_jjvhh")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.482553, -0.15, 3.22469)
+metadata/_edit_lock_ = true
+
+[node name="grass2" parent="trees/trees4" instance=ExtResource("3_kry3j")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0288733, -0.15, 3.23124)
+metadata/_edit_lock_ = true
+
+[node name="grass3" parent="trees/trees4" instance=ExtResource("3_kry3j")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.14231, -0.15, 3.23124)
+metadata/_edit_lock_ = true
+
+[node name="grass4" parent="trees/trees4" instance=ExtResource("3_kry3j")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.12872, -0.15, 3.23124)
+metadata/_edit_lock_ = true
+
+[node name="grass5" parent="trees/trees4" instance=ExtResource("3_kry3j")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.05946, -0.15, 3.23124)
+metadata/_edit_lock_ = true
+
+[node name="grass6" parent="trees/trees4" instance=ExtResource("3_kry3j")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.10124, -0.147355, 3.231)
+metadata/_edit_lock_ = true
+
+[node name="trees5" type="Node" parent="trees"]
+
+[node name="grass-forest4" parent="trees/trees5" instance=ExtResource("2_jjvhh")]
+transform = Transform3D(-3.4144e-08, 0, 0.925932, 0, 1.00378, 0, -0.781123, 0, -4.04738e-08, -2.90702, -0.145, 5.55557)
+
+[node name="grass-forest5" parent="trees/trees5" instance=ExtResource("2_jjvhh")]
+transform = Transform3D(-3.4144e-08, 0, 0.925932, 0, 1.00378, 0, -0.781123, 0, -4.04738e-08, -3.82333, -0.145, 5.55557)
+
+[node name="grass-forest6" parent="trees/trees5" instance=ExtResource("2_jjvhh")]
+transform = Transform3D(-3.4144e-08, 0, 0.925932, 0, 1.00378, 0, -0.781123, 0, -4.04738e-08, -4.75316, -0.145, 5.55557)
+
+[node name="grass-forest7" parent="trees/trees5" instance=ExtResource("2_jjvhh")]
+transform = Transform3D(-3.4144e-08, 0, 0.925932, 0, 1.00378, 0, -0.781123, 0, -4.04738e-08, -5.78454, -0.145, 5.55557)
+
+[node name="grass2" parent="trees/trees5" instance=ExtResource("3_kry3j")]
+transform = Transform3D(-3.4144e-08, 0, 0.925932, 0, 1.00378, 0, -0.781123, 0, -4.04738e-08, -5.31099, -0.145, 5.56068)
+
+[node name="grass3" parent="trees/trees5" instance=ExtResource("3_kry3j")]
+transform = Transform3D(-3.4144e-08, 0, 0.925932, 0, 1.00378, 0, -0.781123, 0, -4.04738e-08, -4.28002, -0.145, 5.56068)
+
+[node name="grass4" parent="trees/trees5" instance=ExtResource("3_kry3j")]
+transform = Transform3D(-3.4144e-08, 0, 0.925932, 0, 1.00378, 0, -0.781123, 0, -4.04738e-08, -3.36668, -0.145, 5.56068)
+
+[node name="grass5" parent="trees/trees5" instance=ExtResource("3_kry3j")]
+transform = Transform3D(-0.781123, 0, -8.09475e-08, 0, 1.00378, 0, 6.82879e-08, 0, -0.925932, -5.91851, -0.149563, 5.93988)
+
+[node name="grass6" parent="trees/trees5" instance=ExtResource("3_kry3j")]
+transform = Transform3D(-0.0166584, 0, -0.925721, 0, 1.00378, 0, 0.780945, 0, -0.0197466, -2.59181, -0.145, 5.56548)
+
+[node name="trees2" type="Node" parent="trees"]
+
+[node name="grass-forest2" parent="trees/trees2" instance=ExtResource("2_jjvhh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.75671, -0.15, -2.88239)
+metadata/_edit_lock_ = true
+
+[node name="grass-forest3" parent="trees/trees2" instance=ExtResource("2_jjvhh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.75726, -0.15, -2.88239)
+metadata/_edit_lock_ = true
+
+[node name="grass-forest4" parent="trees/trees2" instance=ExtResource("2_jjvhh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.77031, -0.15, -2.88239)
+metadata/_edit_lock_ = true
+
+[node name="grass-forest5" parent="trees/trees2" instance=ExtResource("2_jjvhh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.780696, -0.15, -2.88239)
+metadata/_edit_lock_ = true
+
+[node name="grass-forest6" parent="trees/trees2" instance=ExtResource("2_jjvhh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.223515, -0.15, -2.88239)
+metadata/_edit_lock_ = true
+
+[node name="grass-forest7" parent="trees/trees2" instance=ExtResource("2_jjvhh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.376636, -0.15, -3.60103)
+metadata/_edit_lock_ = true
+
+[node name="grass-forest8" parent="trees/trees2" instance=ExtResource("2_jjvhh")]
+transform = Transform3D(0.919135, 0, -0.393942, 0, 1, 0, 0.393942, 0, 0.919135, -0.290454, -0.15, -3.91519)
+metadata/_edit_lock_ = true
+
+[node name="trees3" type="Node" parent="trees"]
+
+[node name="grass-forest2" parent="trees/trees3" instance=ExtResource("2_jjvhh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.25806, -0.15, -2.04569)
+metadata/_edit_lock_ = true
+
+[node name="grass-forest8" parent="trees/trees3" instance=ExtResource("2_jjvhh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.25806, -0.15, -2.9068)
+metadata/_edit_lock_ = true
+
+[node name="grass-forest3" parent="trees/trees3" instance=ExtResource("2_jjvhh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.25861, -0.15, -2.04569)
+metadata/_edit_lock_ = true
+
+[node name="grass-forest4" parent="trees/trees3" instance=ExtResource("2_jjvhh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.27165, -0.15, -2.04569)
+metadata/_edit_lock_ = true
+
+[node name="grass-forest5" parent="trees/trees3" instance=ExtResource("2_jjvhh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.28204, -0.15, -2.04569)
+metadata/_edit_lock_ = true
+
+[node name="grass-forest6" parent="trees/trees3" instance=ExtResource("2_jjvhh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.277833, -0.15, -2.04569)
+metadata/_edit_lock_ = true
+
+[node name="grass-forest7" parent="trees/trees3" instance=ExtResource("2_jjvhh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.263092, -0.15, -2.04569)
+metadata/_edit_lock_ = true
+
+[node name="road" parent="." instance=ExtResource("6_fdnlq")]
+
+[node name="cars" parent="." instance=ExtResource("7_jkdf5")]
+
+[node name="borders" parent="." instance=ExtResource("8_6iyac")]
+
+[node name="guard" parent="." instance=ExtResource("9_d1ilt")]
+
+[node name="grass" parent="." instance=ExtResource("10_fdnlq")]
+
+[node name="GeneratorShed" parent="." instance=ExtResource("13_fdnlq")]
+transform = Transform3D(-0.15, 0, -1.31134e-08, 0, 0.15, 0, 1.31134e-08, 0, -0.15, 3.42308, 0, 9.67573)
+
+[node name="lamp" type="Node" parent="."]
+
+[node name="lamp" parent="lamp" instance=ExtResource("18_b3802")]
+transform = Transform3D(-0.00399737, 0, 0.0030035, 0, 0.005, 0, -0.0030035, 0, -0.00399737, -5.91204, 0.0690558, -11.3881)
+
+[node name="BuildingEntry2" parent="lamp" instance=ExtResource("4_6iyac")]
+transform = Transform3D(0.647282, 0, 1.73841, 0, 1, 0, -0.76225, 0, 1.47621, -5.75365, 0.0794084, -11.2359)
+scene_to_load = ExtResource("19_fevyy")

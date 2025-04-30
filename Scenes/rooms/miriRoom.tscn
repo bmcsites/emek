@@ -1,0 +1,124 @@
+[gd_scene load_steps=7 format=3 uid="uid://7vvfh3uvv8u3"]
+
+[ext_resource type="Script" uid="uid://dvvedeh5qbpso" path="res://Scripts/dialogue_managerGPT.gd" id="2_huvj1"]
+[ext_resource type="Texture2D" uid="uid://b2qafc36nwssh" path="res://Assets/single/bg.jpg" id="3_huvj1"]
+[ext_resource type="Texture2D" uid="uid://bmo2iu8ooltwu" path="res://Assets/characters/podol.png" id="4_ye0j8"]
+[ext_resource type="FontFile" uid="uid://bnbida7kfwdc4" path="res://Assets/fonts/SN_bloom.ttf" id="5_8d81q"]
+[ext_resource type="Texture2D" uid="uid://dqhf70luip8gq" path="res://Assets/single/bubble-chat3.png" id="5_48ubg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nu20m"]
+texture = ExtResource("5_48ubg")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="miriRoom" type="CanvasLayer" parent="."]
+script = ExtResource("2_huvj1")
+
+[node name="RoomBackground" type="TextureRect" parent="miriRoom"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_huvj1")
+metadata/_edit_lock_ = true
+
+[node name="podol" type="Sprite2D" parent="miriRoom"]
+position = Vector2(1402, 587)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_ye0j8")
+
+[node name="DialogBox" type="Panel" parent="miriRoom"]
+offset_left = 257.0
+offset_top = 55.0
+offset_right = 1207.0
+offset_bottom = 555.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_nu20m")
+
+[node name="OptionsContainer" type="VBoxContainer" parent="miriRoom/DialogBox"]
+visible = false
+layout_mode = 0
+offset_left = 61.0
+offset_top = 116.0
+offset_right = 641.0
+offset_bottom = 246.0
+
+[node name="Button" type="Button" parent="miriRoom/DialogBox/OptionsContainer"]
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="miriRoom/DialogBox/OptionsContainer"]
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="miriRoom/DialogBox/OptionsContainer"]
+layout_mode = 2
+
+[node name="CharacterName" type="Label" parent="miriRoom/DialogBox"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 101.0
+offset_top = 30.0
+offset_right = 401.0
+offset_bottom = 80.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_8d81q")
+theme_override_font_sizes/font_size = 21
+text = "פודול:"
+horizontal_alignment = 2
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="DialogText" type="Label" parent="miriRoom/DialogBox"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -900.0
+offset_top = 81.0
+offset_right = -50.0
+offset_bottom = 301.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "פודול"
+horizontal_alignment = 2
+autowrap_mode = 2
+
+[node name="QuestionInput" type="LineEdit" parent="miriRoom/DialogBox"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -824.0
+offset_top = 28.0
+offset_right = -374.0
+offset_bottom = 74.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 27
+placeholder_text = "שאל שאלה"
+alignment = 2
+
+[node name="AskButton" type="Button" parent="miriRoom/DialogBox"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -287.0
+offset_top = 310.0
+offset_right = -200.0
+offset_bottom = 341.0
+grow_horizontal = 0
+text = "שאל שאלה"
+
+[node name="ChatbotButton" type="Button" parent="miriRoom/DialogBox"]
+visible = false
+layout_mode = 0
+offset_left = 231.0
+offset_top = 332.0
+offset_right = 239.0
+offset_bottom = 340.0
+
+[node name="GPTRequest" type="HTTPRequest" parent="miriRoom"]
