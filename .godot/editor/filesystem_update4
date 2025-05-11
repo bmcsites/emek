@@ -1,0 +1,7 @@
+res://Scenes/rooms/miriRoom.tscn
+res://Scripts/dialogue_managerGPT.gd
+res://Scenes/main.tscn
+res://Scenes/rooms/ShiranRoom.tscn
+res://Scenes/rooms/taliRoom.tscn
+res://Scenes/rooms/tali_room.gd
+res://Scenes/rooms/Room515.tscn

@@ -1,0 +1,84 @@
+[gd_scene load_steps=8 format=3 uid="uid://bnbwpquhpr6f4"]
+
+[ext_resource type="Script" uid="uid://dp6hd6pwau0oe" path="res://Scripts/Fighter.gd" id="1_b25br"]
+[ext_resource type="Script" uid="uid://hmc7n1axrfks" path="res://Scripts/battle_scene.gd" id="1_hdvqd"]
+[ext_resource type="Texture2D" uid="uid://dyme2u7uypqy1" path="res://Assets/single/fight-bg.jpg" id="2_anwxn"]
+[ext_resource type="FontFile" uid="uid://de5ac0et8vkur" path="res://Assets/fonts/mk5style.ttf" id="4_3gnqe"]
+[ext_resource type="AudioStream" uid="uid://bu2wmvvlmlyym" path="res://Assets/Sounds/Midnight Rush.mp3" id="4_e5vbs"]
+[ext_resource type="PackedScene" uid="uid://dmxlffmyb5fqw" path="res://Scenes/rooms/games/fight/fight_player_hud.tscn" id="6_7upno"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7upno"]
+size = Vector2(333, 371)
+
+[node name="BattleScene" type="Node2D"]
+script = ExtResource("1_hdvqd")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_anwxn")
+metadata/_edit_lock_ = true
+
+[node name="Player1" type="Node2D" parent="."]
+position = Vector2(1406, 799)
+script = ExtResource("1_b25br")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player1"]
+
+[node name="HitBox" type="Area2D" parent="Player1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player1/HitBox"]
+shape = SubResource("RectangleShape2D_7upno")
+
+[node name="Player2" type="Node2D" parent="."]
+position = Vector2(521, 799)
+script = ExtResource("1_b25br")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player2"]
+
+[node name="HitBox" type="Area2D" parent="Player2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player2/HitBox"]
+shape = SubResource("RectangleShape2D_7upno")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HealthBarPlayer1" type="TextureProgressBar" parent="UI"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HealthBarPlayer2" type="TextureProgressBar" parent="UI"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="StartLabel" type="Label" parent="UI"]
+offset_top = 120.0
+offset_right = 1920.0
+offset_bottom = 365.0
+theme_override_colors/font_color = Color(0.796078, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 20
+theme_override_fonts/font = ExtResource("4_3gnqe")
+theme_override_font_sizes/font_size = 200
+text = "firest round ! Fight"
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="gameMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_e5vbs")
+volume_db = -5.476
+autoplay = true
+
+[node name="startEnd" type="AudioStreamPlayer" parent="."]
+
+[node name="topUI" type="CanvasLayer" parent="."]
+
+[node name="player1_UI" parent="topUI" instance=ExtResource("6_7upno")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -4.0
+grow_horizontal = 0
+
+[node name="player2_UI" parent="topUI" instance=ExtResource("6_7upno")]
+offset_right = 4.0

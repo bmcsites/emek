@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bu2wmvvlmlyym"
+path="res://.godot/imported/Midnight Rush.mp3-41a04ee259f77dfffeedc8a9d67131e2.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/Midnight Rush.mp3"
+dest_files=["res://.godot/imported/Midnight Rush.mp3-41a04ee259f77dfffeedc8a9d67131e2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

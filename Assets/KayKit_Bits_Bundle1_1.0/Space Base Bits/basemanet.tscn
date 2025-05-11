@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://bnm48itvo0hiu"]
-
-[ext_resource type="PackedScene" uid="uid://dkne4ma8jyxfp" path="res://Assets/KayKit_Bits_Bundle1_1.0/Space Base Bits/basemodule_C.gltf" id="1_vfw3e"]
-
-[node name="Basemanet" type="Node3D"]
-
-[node name="basemodule_C2" parent="." instance=ExtResource("1_vfw3e")]
